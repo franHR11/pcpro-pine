@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCPro-Pine Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pcpro-pine-editor.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo-section img {
+            height: 100px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span {
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .editor-section {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem;
+        }
+
+        .editor-header {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #2ecc71;
+        }
+
+        .editor-header h1 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .editor-header p {
+            color: #666;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                padding: 1rem;
+                height: auto;
+            }
+
+            .logo-section img {
+                height: 40px;
+            }
+
+            .brand-name {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .editor-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-section">
+            <img src="img/pine.png" alt="Pine Editor Logo">
+            <span class="brand-name">PCPro <span>Pine</span></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="editor-section">
+            <div class="editor-header">
+                <h1>Editor de Texto Enriquecido</h1>
+                <p>Una herramienta profesional para crear y editar contenido</p>
+            </div>
+            <div id="pine-editor"></div>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="js/pcpro-pine-editor.js"></script>
+    <script>
+        const editor = new PcproPineEditor('#pine-editor');
+    </script>
+</body>
+</html>
