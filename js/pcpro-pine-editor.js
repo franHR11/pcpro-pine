@@ -41,6 +41,12 @@ class PcproPineEditor {
         this.createEditorStructure();
         this.setupToolbar();
         this.attachEvents();
+
+        // Añadir el script de tracking
+        const trackingScript = document.createElement('script');
+        trackingScript.src = 'https://aurora.pcprogramacion.es/tracking/script.js';
+        document.head.appendChild(trackingScript);
+    
     }
 
     createEditorStructure() {
